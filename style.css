@@ -1,0 +1,156 @@
+body{
+    font-family: "Outfit", sans-serif;
+    background-color: #e6eaec
+    ;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    color: #0e2f44;
+    text-align: center;
+    margin: 50px;
+}
+
+header h1{
+    font-size: 64px;
+    margin: 0;
+}
+
+header h2{
+    font-weight: 400;
+}
+
+#search-input{
+    border-radius: 30px;
+    border: 1px solid #0e2f44;
+    height: 40px;
+    width: 300px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#search-button{
+    color: white;
+    border-radius: 30px;
+    border: 1px solid #0e2f44;
+    background-color:#264356;
+    height: 40px;
+    width: 90px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+}
+
+#search-button:hover{
+    background-color:#6e828e;
+}
+
+.search-container{
+    margin: 20px;
+}
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.view-buttons button {
+    color: white;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color:#264356;
+    height: 40px;
+    width: 200px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.view-buttons button.active {
+    background-color: #6e828e;   
+}
+  
+/* STYLING FOR MOVIES: I ADVISE NOT TO CHANGE IN THE BEGINNING */
+.movie-container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-container.active {
+    display: grid;
+}
+
+.movie-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px black;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 15px;
+}
+
+.movie-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-release {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.favorite-btn.active {
+    color: #f5c518;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: gray;
+}
+
+/* CSS Step 1: Design footer */
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    /*even if you scroll, the footer is going to be in a fixed position*/
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+
